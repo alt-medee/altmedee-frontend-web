@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+/* ✅ Tailwind v4 theme system */
+@theme {
+  --color-primary: #00aeef;
+  --color-primary-dark: #0b5ed7;
+  --color-primary-light: #0000FF;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-card: #f9fafb;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

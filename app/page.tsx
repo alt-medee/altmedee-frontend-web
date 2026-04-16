@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import SolutionSuite from "../components/SolutionSuits"
 import CircularFeatures from "../components/CircularFeatures"
+import HowItWorks from "@/components/HowItsWorks";
+import Features from "@/components/Features"
 
 // HEADER
 function Header() {
@@ -53,11 +55,6 @@ function Hero() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }}>
-          {/* <div className="bg-white shadow-xl rounded-2xl p-6 hover:scale-105 transition">
-            <p className="text-gray-500">Dashboard Preview</p>
-            <div className="h-40 bg-blue-100 rounded mt-4"></div>
-          </div> */}
-
           <Contact />
         </motion.div>
       </div>
@@ -66,58 +63,6 @@ function Hero() {
 }
 
 // FEATURES SECTION
-function Features() {
-  const data = [
-    {
-      title: "📞 Call Tracking",
-      desc: "Track every incoming and outgoing call, record conversations, and never miss a potential lead.",
-    },
-    {
-      title: "📊 Advanced Analytics",
-      desc: "Get detailed insights into your sales performance with real-time dashboards and reports.",
-    },
-    {
-      title: "📢 Smart Marketing Automation",
-      desc: "Automate campaigns, nurture leads, and convert prospects with personalized marketing flows.",
-    },
-    {
-      title: "🌐 High-Converting Website",
-      desc: "Create optimized landing pages that capture leads and drive higher conversion rates.",
-    },
-    {
-      title: "🤖 AI Chatbot",
-      desc: "Engage visitors instantly, answer queries, and capture leads 24/7 with intelligent automation.",
-    },
-    {
-      title: "💬 WhatsApp Automation",
-      desc: "Connect with customers on WhatsApp, send automated messages, and manage conversations at scale.",
-    },
-    {
-      title: "🗂️ Lead Management",
-      desc: "Organize, track, and manage leads efficiently through every stage of your sales pipeline.",
-    },
-  ];
-
-  return (
-    <section className="py-20 bg-white flex flex-col justify-center gap-4">
-      <h3 className="text-center text-3xl font-bold text-gray-800">From First Customer Inquiry to Confirmed Treatment</h3>
-      <h4 className="text-center text-xl">Smarter patient engagement with AI-driven automation and higher conversions.</h4>
-      <h5 className="text-center text-3xl font-bold text-gray-800">Features</h5>
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12 px-6">
-        {data.map((item, i) => (
-          <motion.div
-            key={i}
-            whileHover={{ y: -10 }}
-            className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition"
-          >
-            <h4 className="text-xl font-semibold text-blue-600">{item.title}</h4>
-            <p className="mt-3 text-gray-600">{item.desc}</p>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 // TESTIMONIAL SECTION
 function Testimonials() {
@@ -129,23 +74,6 @@ function Testimonials() {
       </p>
     </section>
   );
-}
-
-{/* HowItWorks */ }
-function HowItWorks() {
-  return (
-    <section id="howItWorks" className="py-20 bg-gray-50 text-center">
-      <h2 className="text-3xl font-bold mb-12">HOW IT WORKS</h2>
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-        {["Capture leads", "Automate Followups", "Track in CRM", "Convert into customers"].map((item, i) => (
-          <div key={i} className="bg-white p-6 rounded-lg border">
-            <h3 className="font-semibold text-blue-600">{item}</h3>
-            {/* <p className="text-lg text-gray-600 mt-2">Tailored CRM workflows.</p> */}
-          </div>
-        ))}
-      </div>
-    </section>
-  )
 }
 
 {/* PRICING */ }
@@ -260,10 +188,10 @@ export default function Home() {
       <Header />
       <Hero />
       <Features />
+      <HowItWorks />
       <SolutionSuite />
-      {/* <HowItWorks /> */}
       <CircularFeatures />
-      <Pricing />
+      {/* <Pricing /> */}
       {/* <Testimonials /> */}
       <Footer />
     </div>

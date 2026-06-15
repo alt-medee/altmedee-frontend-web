@@ -38,20 +38,121 @@ function Hero() {
   );
 }
 
-// CONTACT FORM
 function Contact() {
   return (
-    <div className="lg:mt-10 border p-6 rounded-lg bg-gray-50">
-      <h3 className="font-semibold mb-4">Connect with Our Team</h3>
-      <input placeholder="Enter your name" className="w-full mb-3 p-3 border rounded-md" />
-      <input placeholder="Enter your business email" className="w-full mb-3 p-3 border rounded-md" />
-      <div className="flex gap-2 mb-3">
-        <span className="px-3 flex items-center border rounded-md">+91</span>
-        <input placeholder="Phone Number" className="w-full p-3 border rounded-md" />
+    <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl border border-slate-200">
+      <div className="mb-5">
+        <span className="inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-600">
+          Contact Us
+        </span>
+
+        <h3 className="mt-3 text-2xl font-bold text-slate-900">
+          Book a Free Demo
+        </h3>
+
+        <p className="mt-2 text-sm text-slate-500">
+          Talk to our CRM experts and see how we can help your business grow.
+        </p>
       </div>
-      <textarea placeholder="Message" className="w-full mb-3 p-3 border rounded-md" />
-      <p className="text-xs text-gray-500 mb-3">By submitting this form, you agree to our Privacy Policy</p>
-      <button className="w-full bg-primary-dark text-white py-3 rounded-md">Submit</button>
+
+      <form className="space-y-4">
+        <input
+          type="text"
+          placeholder="Full Name"
+          className="
+            w-full
+            rounded-xl
+            border
+            border-slate-300
+            bg-white
+            px-4
+            py-3
+            text-slate-900
+            placeholder:text-slate-400
+            focus:outline-none
+            focus:ring-2
+            focus:ring-blue-500
+            focus:border-blue-500
+          "
+        />
+
+        <input
+          type="email"
+          placeholder="Business Email"
+          className="
+            w-full
+            rounded-xl
+            border
+            border-slate-300
+            bg-white
+            px-4
+            py-3
+            text-slate-900
+            placeholder:text-slate-400
+            focus:outline-none
+            focus:ring-2
+            focus:ring-blue-500
+            focus:border-blue-500
+          "
+        />
+
+        <div className="flex gap-2">
+          <div
+            className="
+              flex
+              items-center
+              justify-center
+              rounded-xl
+              border
+              border-slate-300
+              bg-slate-50
+              px-4
+              text-slate-700
+              font-medium
+            "
+          >
+            +91
+          </div>
+
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            className="
+              flex-1
+              rounded-xl
+              border
+              border-slate-300
+              bg-white
+              px-4
+              py-3
+              text-slate-900
+              placeholder:text-slate-400
+              focus:outline-none
+              focus:ring-2
+              focus:ring-blue-500
+              focus:border-blue-500
+            "
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="
+            w-full
+            rounded-xl
+            bg-blue-600
+            py-3
+            font-semibold
+            text-white
+            transition-all
+            duration-300
+            hover:bg-blue-700
+            hover:shadow-lg
+          "
+        >
+          Book Demo →
+        </button>
+      </form>
     </div>
   );
 }

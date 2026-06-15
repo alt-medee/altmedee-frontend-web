@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -29,30 +30,37 @@ export default function Header() {
     <>
       <header
         style={{ width: "100vw", maxWidth: "100%", left: 0, right: 0 }}
-        className={`fixed top-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)] border-b border-gray-100"
-            : "bg-[#040f1e]"
-        }`}
+        className={`fixed top-0 z-50 transition-all duration-500 ${scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)] border-b border-gray-100"
+          : "bg-[#040f1e]"
+          }`}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 16px" }}>
           <div className="flex items-center justify-between h-16">
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 shrink-0">
-              <div className="w-9 h-9 rounded-full bg-[#0a1e3d] border-2 border-[#00aeef]/40 flex items-center justify-center">
+              {/* <div className="w-9 h-9 rounded-full bg-[#0a1e3d] border-2 border-[#00aeef]/40 flex items-center justify-center">
                 <svg viewBox="0 0 20 20" fill="none" width="14" height="14">
                   <rect x="2" y="13" width="2.5" height="5" rx="0.5" fill="#00aeef" />
                   <rect x="6" y="10" width="2.5" height="8" rx="0.5" fill="#00aeef" />
                   <rect x="10" y="7" width="2.5" height="11" rx="0.5" fill="white" opacity="0.9" />
                   <rect x="14" y="4" width="2.5" height="14" rx="0.5" fill="#00aeef" />
                 </svg>
+              </div> */}
+              <div className="relative w-10 h-10 rounded-full bg-[#0a1e3d] border-2 border-[#00aeef]/40 flex items-center justify-center overflow-hidden py-5 px-5">
+                <Image
+                  src="/growth.png"
+                  alt="Growth"
+                  fill
+                  className="object-contain p-1"
+                />
               </div>
-              <div style={{ lineHeight: 1 }}>
-                <div className={`text-[13px] font-black tracking-widest uppercase transition-colors duration-300 ${scrolled ? "text-gray-900" : "text-white"}`}>
+              <div style={{ lineHeight: 1 }} className="flex flex-col gap-1 items-center justify-center">
+                <div className={`text-[14px] font-black tracking-widest uppercase transition-colors duration-300 ${scrolled ? "text-gray-900" : "text-white"}`}>
                   ALT<span className="text-[#00aeef]">MEDEE</span>
                 </div>
-                <div className={`text-[8px] font-semibold tracking-[0.18em] uppercase transition-colors duration-300 ${scrolled ? "text-gray-400" : "text-white/40"}`}>
+                <div className={`text-[10px] font-semibold tracking-[0.18em] uppercase transition-colors duration-300 ${scrolled ? "text-gray-400" : "text-white/40"}`}>
                   CRM Solutions
                 </div>
               </div>
@@ -64,11 +72,10 @@ export default function Header() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className={`px-4 py-2 text-[13.5px] font-semibold rounded-lg transition-all duration-200 ${
-                    scrolled
-                      ? "text-gray-600 hover:text-[#00aeef] hover:bg-[#00aeef]/10"
-                      : "text-white/80 hover:text-white hover:bg-white/10"
-                  }`}
+                  className={`px-4 py-2 text-[13.5px] font-semibold rounded-lg transition-all duration-200 ${scrolled
+                    ? "text-gray-600 hover:text-[#00aeef] hover:bg-[#00aeef]/10"
+                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    }`}
                 >
                   {link.label}
                 </a>
